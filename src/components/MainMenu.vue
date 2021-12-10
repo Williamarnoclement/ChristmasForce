@@ -10,8 +10,8 @@
 	<ul>
 		<li ><a href="#">Accueil</a></li>
 		<li><a href="#">Jeux</a></li>
-		<li><a href="#">Coloriages</a></li>
-		<li><a href="#">Contact</a></li>
+		<li><a href="#">Personnages</a></li>
+		<li><a href="#">Activités</a></li>
 	</ul>
 </nav>
 </div>

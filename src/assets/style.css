@@ -1,0 +1,376 @@
+/* General */
+
+html, body {
+	margin: 0 !important;
+	padding: 0 !important;
+	color:black;
+	scroll-behavior: smooth;
+	height: 100%;
+	background-attachment: fixed;
+}
+* {
+	box-sizing: border-box;
+}
+
+.lol{
+	color:white;}
+	a{
+		text-decoration: none;
+		color: black;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	/* Affichage Desktop */
+
+	@media (min-width: 900px) {
+
+.left_one { grid-area: left_one; background-color: red;}
+
+.right_one { grid-area: right_one; background-color: green;}
+
+
+		menu ul {
+			justify-content: center;
+			display: inline-flex;
+			font-weight: bold;
+		}
+
+		menu {
+			display: flex;
+			justify-content: center;
+			text-transform: uppercase;
+		}
+
+		li{
+			margin: 10px;
+		}
+		._game_screen picture{
+			display: flex;
+			justify-content: center;
+		}
+
+		.flex-container {
+			display: flex;
+			flex-direction: row;
+			width: 80%;
+			max-width: 400px;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			margin: auto;
+		}
+
+		._cf1_screen {
+
+			background:white;
+			background-repeat:no-repeat;
+			background-position: center ;
+			background-size: cover;
+			height: 500px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			line-height:20px;
+			display: grid;
+		  grid-template-columns: 1fr 1fr 1fr;
+		  grid-template-rows: 1fr;
+		  gap: 0px 0px;
+		  grid-auto-flow: row;
+		  grid-template-areas:
+		    "left_one left_one right_one";
+		}
+
+		.right_one img{
+			width: 90%;
+			height: auto;
+		}
+
+		.right_one {
+			display: flex;
+		  align-items: center;
+		  justify-content: center;
+		}
+
+		.left_one{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+
+
+		/* Create four equal columns that floats next to each other */
+		.column {
+			float: left;
+			width: 25%;
+			padding: 10px;
+			height: 300px; /* Should be removed. Only for demonstration */
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 600px) {
+			.column {
+				width: 100%;
+			}
+		}
+
+		@keyframes fadeInRight {
+			0% {
+				opacity: 0;
+				left: 20%;
+			}
+			100% {
+				opacity: 1;
+				left: 0;
+			}
+		}
+
+
+		.menu {
+			position: fixed;
+			left: 15px;
+			top: -11px;
+			bottom: 0;
+			margin-bottom: 0;
+			border-right: 1px solid white;
+			border-left: 1px solid white;
+			color:white;
+		}
+
+		._game_screen svg {
+			width: 100%;
+			justify-content: center;
+			height: auto;
+		}
+
+		.contenu{
+			margin-top: 50px;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 500px;
+		}
+		.contenu h1{
+			font-size: 16px;
+			text-align: center;
+		}
+
+		#contenu_fin{
+			margin: 10px;
+			padding-left:30px;
+			padding-bottom:7px;
+			font-family: 'Arial', sans-serif;
+		}
+
+		.menu_bottom {
+			display: block;
+			overflow: hidden;
+			width: 25px;
+			line-height: 25px;
+			padding: 100px 0;
+			margin-top: 42vh;
+
+		}
+
+		.menu_bottom_wac {
+			display: inline-block;
+			vertical-align: top;
+			transform: translate(0,100%) rotate(-90deg);
+			transform-origin: 0 0;
+			white-space: nowrap;
+		}
+
+
+		._game_screen,.QuiSuisJe,.OuJeVais {
+			clip: rect(auto, auto, auto, auto);
+		}
+
+
+		._game_screen {
+
+			background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.4)
+    ),url(../assets/webp/bg.webp);
+			background-attachment: fixed;
+			background-color: #cbf5fc;
+			background-repeat:no-repeat;
+			background-position: center ;
+			background-size:cover;
+			height: 100vh;
+			line-height:20px;
+			transition: 0.2s;
+
+		}
+		.right_one img{
+			width: 90%;
+			height: auto;
+		}
+
+		._game_screen h1{
+			font-size: 40px;
+		}
+		._game_screen h2{
+			padding-left: 50px;
+			margin-top: 0px;
+			padding-top: 0px;
+			font-size: 60px;
+		}
+		._game_screen .lol{
+			padding-left: 50px;
+			padding-top: 30vh; /* poussé de la moitié de hauteur de viewport */
+			font-size: 20px;
+		}
+
+		._game_screen a{
+			padding-left: 10px;
+		}
+
+	}
+
+	/* Affichage Mobile */
+	@media (max-width: 900px) {
+
+		._container {
+			display: block;
+}
+
+.left_one { grid-area: left_one; background-color: red; height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;}
+
+
+
+.right_one { grid-area: right_one; background-color: green;height: 300px;}
+
+		.flex-container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			height: 100%;
+		}
+
+		/* Create four equal columns that floats next to each other */
+		.column {
+			float: left;
+			width: 25%;
+			padding: 10px;
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 600px) {
+			.column {
+				width: 100%;
+			}
+		}
+
+		._game_screen picture{
+			display: flex;
+			justify-content: center;
+		}
+
+		._game_screen img {
+			width: 10%;
+			height: auto;
+		}
+
+		._game_screen svg {
+			width: 50%;
+			height: auto;
+
+		}
+
+		.menu {
+			position: fixed;
+			left: 15px;
+			top: -11px;
+			bottom: 0;
+			padding-top: 0;
+			padding-left: 0px;
+			margin-bottom: 0;
+			border-right: 1px solid #000;
+			border-left: 1px solid #000;
+		}
+		.contenu{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 90%;
+			margin-top: 30px;
+		}
+		.contenu h1{
+			text-align: center;
+			font-size: 25px;
+		}
+		#contenu_fin{
+			margin: 10px;
+			padding-left:30px;
+			padding-bottom:7px;
+			font-family: 'Arial', sans-serif;
+		}
+
+		.right_one img{
+			width: 90%;
+			height: auto;
+		}
+
+		._game_screen {
+
+			background:linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.4)
+    ), url(../assets/webp/bg.webp);
+			background-repeat:no-repeat;
+			background-position: center ;
+			background-size: cover;
+			height: 100vh;
+			line-height:20px;
+
+		}
+
+		._cf1_screen {
+
+			background:white;
+			background-repeat:no-repeat;
+			background-position: center ;
+			background-size: cover;
+			height: 100vh;
+			line-height:20px;
+
+		}
+		._game_screen h1{
+			padding-left: 0px;
+			font-size: 30px;
+		}
+		._game_screen h2{
+			padding-left: 50px;
+			margin-top: 0px;
+			padding-top: 0px;
+			font-size: 15px;
+		}
+		._game_screen .lol{
+			padding-left: 50px;
+			margin-top: 0px;
+			padding-top: 20vh; /* poussé de la moitié de hauteur de viewport */
+			font-size: 10px;
+			line-height:40px;
+		}
+
+		._game_screen a{
+			padding-left: 50px;
+		}
+	}

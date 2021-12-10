@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <MainMenu msg="GO" />
+  <MainTop msg="GO" />
+  <MainSectionOne msg="GO" />
+  <bottom copyright="© William-Arno CLEMENT" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainTop from './components/MainTop.vue'
+import MainMenu from './components/MainMenu.vue'
+import Bottom from './components/Bottom.vue'
+import MainSectionOne from './components/MainSectionOne.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MainTop,
+    MainMenu,
+    Bottom,
+    MainSectionOne
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

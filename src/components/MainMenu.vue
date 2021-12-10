@@ -1,0 +1,233 @@
+<template>
+<button class="button_container" id="toggle" aria-controls="primary-menu" aria-expanded="false">
+<span class="top"></span>
+<span class="middle"></span>
+<span class="bottom"></span>
+</button>
+
+<div class="overlay" id="overlay">
+<nav class="overlay-menu">
+	<ul>
+		<li ><a href="#">Accueil</a></li>
+		<li><a href="#">Jeux</a></li>
+		<li><a href="#">Coloriages</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+</nav>
+</div>
+</template>
+
+<script>
+export default {
+  name: 'MainMenu'
+}
+
+
+</script>
+
+<style scoped>
+body {
+  background-color: #F5F5F5;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  heigh: 100%;
+  text-align: center;
+  top: 40%;
+  left: 0;
+  margin: 0 auto;
+  font-family: montserrat, sans-serif;
+}
+.container p {
+  font-size: 20px;
+}
+.container a {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: purple;
+  text-decoration: none;
+  overflow: hidden;
+  top: 5px;
+}
+.container a:after {
+  content: "";
+  position: absolute;
+  background: blue;
+  height: 2px;
+  width: 0%;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  transition: 0.35s ease;
+}
+.container a:hover:after, .container a:focus:after, .container a:active:after {
+  width: 100%;
+}
+
+h1, h2 {
+  position: relative;
+  text-align: center;
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.button_container {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.25s ease;
+  border: 0;
+  background-color: transparent;
+}
+.button_container:hover {
+  opacity: 0.7;
+}
+.button_container.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #FFF;
+}
+.button_container.active .middle {
+  opacity: 0;
+  background: #FFF;
+}
+.button_container.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #FFF;
+}
+.button_container span {
+  background: white;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+.button_container span:nth-of-type(2) {
+  top: 11px;
+}
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+.overlay {
+  position: fixed;
+  background: #E7203B;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+  font-weight: 300;
+}
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+  height: 100%;
+}
+.overlay.open li {
+  -webkit-animation: fadeInRight 0.5s ease forwards;
+          animation: fadeInRight 0.5s ease forwards;
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+.overlay.open li:nth-of-type(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.overlay.open li:nth-of-type(3) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+.overlay.open li:nth-of-type(4) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.overlay nav {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  font-family: montserrat, sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+}
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+  width: 100%;
+}
+.overlay ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #FFF;
+  transition: 0.35s;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+</style>

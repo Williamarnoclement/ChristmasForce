@@ -2,14 +2,19 @@
 <section class="_cf1_screen">
 		<div><h1>(re)Découvrez la magie de Noël</h1>
 		<p>Découvrez nos activités pour petits et grands !</p>
-		<button>Découvrir</button>
+		<button @click="goTo('/activites')">Découvrir</button>
 		</div>
 </section>
 </template>
 
 <script>
 export default {
-  name: 'MainMore'
+  name: 'MainMore',
+  methods: {
+    goTo(route) {
+      window.location = route;
+    }
+  }
 }
 </script>
 

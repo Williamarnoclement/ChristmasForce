@@ -8,10 +8,10 @@
 <div class="overlay" id="overlay">
 <nav class="overlay-menu">
 	<ul>
-		<li ><a href="#">Accueil</a></li>
+		<li ><a href="/">Accueil</a></li>
 		<li><a href="#">Jeux</a></li>
 		<li><a href="#">Personnages</a></li>
-		<li><a href="#">Activités</a></li>
+		<li><a href="/activites">Activités</a></li>
 	</ul>
 </nav>
 </div>

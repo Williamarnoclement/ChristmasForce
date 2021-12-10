@@ -27,10 +27,14 @@ html, body {
 
 	@media (min-width: 900px) {
 
-.left_one { grid-area: left_one; background-color: red;}
+.left_one { grid-area: left_one; background-color: white;}
 
-.right_one { grid-area: right_one; background-color: green;}
+.right_one { grid-area: right_one; background-color: white;}
 
+
+.left_two { grid-area: left_two;}
+
+.right_two { grid-area: right_two;}
 
 		menu ul {
 			justify-content: center;
@@ -64,7 +68,6 @@ html, body {
 		}
 
 		._cf1_screen {
-
 			background:white;
 			background-repeat:no-repeat;
 			background-position: center ;
@@ -73,12 +76,27 @@ html, body {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 			line-height:20px;
 			display: grid;
-		  grid-template-columns: 1fr 1fr 1fr;
-		  grid-template-rows: 1fr;
-		  gap: 0px 0px;
-		  grid-auto-flow: row;
-		  grid-template-areas:
-		    "left_one left_one right_one";
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+			gap: 0px 0px;
+			grid-auto-flow: row;
+			grid-template-areas:"left_one left_one right_one";
+		}
+
+		._cf2_screen {
+			background:white;
+			background-repeat:no-repeat;
+			background-position: center ;
+			background-size: cover;
+			height: 500px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			line-height:20px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+			gap: 0px 0px;
+			grid-auto-flow: row;
+			grid-template-areas:"left_two right_two right_two";
 		}
 
 		.right_one img{
@@ -86,18 +104,38 @@ html, body {
 			height: auto;
 		}
 
-		.right_one {
-			display: flex;
-		  align-items: center;
-		  justify-content: center;
+		.left_two img{
+			width: 90%;
+			height: auto;
 		}
 
-		.left_one{
-			display: flex;
-			justify-content: center;
+		._cf1_screen {
 			align-items: center;
 		}
 
+		._cf2_screen {
+			align-items: center;
+		}
+
+		.right_two *{
+			display: flex;
+			justify-content: center;
+		}
+
+		.left_two *{
+			display: flex;
+			justify-content: center;
+		}
+
+		.left_one p {
+			display: flex;
+			justify-content: center;
+		}
+
+		.left_one h1 {
+			display: flex;
+			justify-content: center;
+		}
 
 
 		/* Create four equal columns that floats next to each other */
@@ -207,7 +245,6 @@ html, body {
 			height: 100vh;
 			line-height:20px;
 			transition: 0.2s;
-
 		}
 		.right_one img{
 			width: 90%;
@@ -242,17 +279,17 @@ html, body {
 			display: block;
 }
 
-.left_one { grid-area: left_one; background-color: red; height: 200px;
+.left_one { grid-area: left_one; background-color: white; height: 200px;
 	display: flex;
 	justify-content: center;
 	align-items: center;}
 
 
 
-.right_one { grid-area: right_one; background-color: green;height: 300px;}
+.right_one { grid-area: right_one; background-color: white;height: 300px;}
 
 		.flex-container {
-			display: flex;
+			display: block;
 			flex-direction: row;
 			align-items: center;
 			height: 100%;
@@ -279,20 +316,13 @@ html, body {
 			}
 		}
 
-		._game_screen picture{
+		._game_screen picture {
+			width: 40%;
 			display: flex;
 			justify-content: center;
-		}
-
-		._game_screen img {
-			width: 10%;
-			height: auto;
-		}
-
-		._game_screen svg {
-			width: 50%;
-			height: auto;
-
+			align-items: center;
+  margin-left:auto;
+  margin-right:auto;
 		}
 
 		.menu {
@@ -328,6 +358,16 @@ html, body {
 			height: auto;
 		}
 
+		.left_two img{
+			width: 90%;
+			height: auto;
+			justify-content: center;
+		}
+
+		.left_two *{
+			text-align: center;
+		}
+
 		._game_screen {
 
 			background:linear-gradient(
@@ -343,13 +383,25 @@ html, body {
 		}
 
 		._cf1_screen {
-
 			background:white;
+			background-repeat:no-repeat;
+			background-position: center ;
+			background-size: cover;
+			height: 70vh;
+			line-height:20px;
+
+		}
+
+		._cf2_screen {
+
+			background:blueviolet;
 			background-repeat:no-repeat;
 			background-position: center ;
 			background-size: cover;
 			height: 100vh;
 			line-height:20px;
+			display: flex;			
+			flex-direction: column-reverse;
 
 		}
 		._game_screen h1{

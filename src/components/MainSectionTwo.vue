@@ -1,14 +1,14 @@
 <template>
 <section class="_cf1_screen">
 		<div class="left_one">
-			<h1>Christmas Force: La force de Noël</h1><br>
-			<p>Découvrez le jeu original</p>
+			<h1>Christmas Force 2</h1><br>
+			<p>Découvrez le nouveau jeu... en 3D</p>
 			<button>Télécharger</button>
 		</div>
 		<div class="right_one">
 			<picture>
 			<source type="img/webp/webp" srcset="../assets/webp/go.webp">
-			<img src="../assets/png/go.png" alt="Un personnage du jeu Christmas Force !">
+			<img src="../assets/png/image.png" alt="Les personnages du jeu Christmas Force 2 !">
 		</picture>
 		</div>
 </section>
@@ -16,13 +16,13 @@
 
 <script>
 export default {
-  name: 'MainSectionOne'
+  name: 'MainSectionTwo'
 }
 </script>
 
 <style scoped>
 button{
-	background: #E7203B;
+	background: white;
 	margin: 0 auto;
     display: block;
 	padding: 30px;
@@ -30,12 +30,12 @@ button{
 	text-decoration: none;
 	margin-top: 15px;
 	border: none;
-	color: white;
+	color: #E7203B;
 	font-size: 26px;
 }
 
 button:hover{
-	background: #e7203b9f;
+	background: whitesmoke;
 	cursor: crosshair;
 }
 
@@ -68,14 +68,14 @@ html, body {
 
 	@media (min-width: 900px) {
 
-.left_one { grid-area: left_one; background-color: white;}
+.left_one { grid-area: left_one;}
 
-.right_one { grid-area: right_one; background-color: white;}
+.right_one { grid-area: right_one; }
 
 
 
 		._cf1_screen {
-			background:white;
+			background:#E7203B;
 			background-repeat:no-repeat;
 			background-position: center ;
 			background-size: cover;
@@ -87,7 +87,7 @@ html, body {
 			grid-template-rows: 1fr;
 			gap: 0px 0px;
 			grid-auto-flow: row;
-			grid-template-areas:"left_one left_one right_one";
+			grid-template-areas:"right_one left_one left_one";
 		}
 
 		.right_one img{
@@ -103,11 +103,13 @@ html, body {
 		.left_one p {
 			display: flex;
 			justify-content: center;
+			color: white;
 		}
 
 		.left_one h1 {
 			display: flex;
 			justify-content: center;
+			color: white;
 		}
 
 
@@ -126,22 +128,33 @@ html, body {
 		}
 
 		.left_one { 
-			background-color: white; 
+			 height: 200px;
 			text-align: center;
-			margin-bottom: 100px;
-		}
+			}
+
+
 
 		.right_one { grid-area: right_one; height: 300px;
 			display: flex;
 			justify-content: center;
 		}
 
+
 		.right_one img{
 			height: 300px;
+			
+		}
+
+		.left_two img{
+			justify-content: center;
+		}
+
+		.left_two *{
+			text-align: center;
 		}
 
 		._cf1_screen {
-			background:white;
+			background:#E7203B;
 			background-repeat:no-repeat;
 			background-position: center ;
 			background-size: cover;
@@ -149,6 +162,8 @@ html, body {
 			line-height:20px;
 			display: flex;			
 			flex-direction: column-reverse;
+			padding-bottom: 100px;
+
 		}
 	}
 

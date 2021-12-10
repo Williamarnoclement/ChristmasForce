@@ -91,3 +91,281 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+/* General */
+
+.lol{
+	color:white;}
+	a{
+		text-decoration: none;
+		color: black;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	/* Affichage Desktop */
+
+	@media (min-width: 900px) {
+		.flex-container {
+			display: flex;
+			flex-direction: row;
+			width: 80%;
+			max-width: 400px;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			margin: auto;
+		}
+
+		._game_screen picture{
+			display: flex;
+			justify-content: center;
+		}
+
+
+		._game_screen svg {
+			width: 100%;
+			justify-content: center;
+			height: auto;
+		}
+
+		._game_screen,.QuiSuisJe,.OuJeVais {
+			clip: rect(auto, auto, auto, auto);
+		}
+
+
+		._game_screen {
+
+			background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.4)
+    ),url(../assets/webp/bg.webp);
+			background-attachment: fixed;
+			background-color: #cbf5fc;
+			background-repeat:no-repeat;
+			background-position: center ;
+			background-size:cover;
+			height: 100vh;
+			line-height:20px;
+			transition: 0.2s;
+			width: 100%;
+		}
+
+		._game_screen h1{
+			font-size: 40px;
+		}
+		._game_screen h2{
+			padding-left: 50px;
+			margin-top: 0px;
+			padding-top: 0px;
+			font-size: 60px;
+		}
+		._game_screen .lol{
+			padding-left: 50px;
+			padding-top: 30vh; /* poussé de la moitié de hauteur de viewport */
+			font-size: 20px;
+		}
+
+		._game_screen a{
+			padding-left: 10px;
+		}
+
+	}
+
+	/* Affichage Mobile */
+	@media (max-width: 900px) {
+
+		.flex-container {
+			display: block;
+			flex-direction: row;
+			align-items: center;
+			height: 100%;
+		}
+
+		._game_screen picture {
+			width: 40%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+  margin-left:auto;
+  margin-right:auto;
+		}
+
+		._game_screen {
+
+			background:linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.4)
+    ), url(../assets/webp/bg.webp);
+			background-repeat:no-repeat;
+			background-position: center ;
+			background-size: cover;
+			height: 100vh;
+			line-height:20px;
+
+		}
+		._game_screen h1{
+			padding-left: 0px;
+			font-size: 30px;
+		}
+		._game_screen h2{
+			padding-left: 50px;
+			margin-top: 0px;
+			padding-top: 0px;
+			font-size: 15px;
+		}
+		._game_screen .lol{
+			padding-left: 50px;
+			margin-top: 0px;
+			padding-top: 20vh; /* poussé de la moitié de hauteur de viewport */
+			font-size: 10px;
+			line-height:40px;
+		}
+
+		._game_screen a{
+			padding-left: 50px;
+		}
+	}
+
+
+.neon {
+  width: 100%;
+  height: auto;
+  animation: flicker 7s linear infinite;
+}
+
+.neon svg {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: .9;
+  }
+
+  6% {
+    opacity: .85;
+  }
+
+  8% {
+    opacity: .95;
+  }
+
+  10% {
+    opacity: .90;
+  }
+
+  11% {
+    opacity: .922;
+  }
+
+  12% {
+    opacity: .9;
+  }
+
+  14% {
+    opacity: .95;
+  }
+
+  16% {
+    opacity: .98;
+  }
+
+  17% {
+    opacity: .9;
+  }
+
+  19% {
+    opacity: .93;
+  }
+
+  20% {
+    opacity: .99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: .94;
+  }
+
+  28% {
+    opacity: .98;
+  }
+
+  37% {
+    opacity: .93;
+  }
+
+  38% {
+    opacity: .5;
+  }
+
+  39% {
+    opacity: .96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: .97;
+  }
+
+  46% {
+    opacity: .94;
+  }
+
+  56% {
+    opacity: .9;
+  }
+
+  58% {
+    opacity: .9;
+  }
+
+  60% {
+    opacity: .99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: .9;
+  }
+
+  72% {
+    opacity: .95;
+  }
+
+  93% {
+    opacity: .93;
+  }
+
+  95% {
+    opacity: .95;
+  }
+
+  97% {
+    opacity: .93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+</style>

@@ -7,10 +7,12 @@
 <script>
 import Home from "./views/Home";
 import Activites from "./views/Activites";
+import Personnages from "./views/Personnages";
 
 const routes = {
   "/": Home,
-  "/activites": Activites
+  "/activites": Activites,
+  "/personnages": Personnages
 };
 
 export default {

@@ -1,7 +1,11 @@
 <template>
   <div id="canvas"></div>
 </template>
-
+<style>
+#canvas{
+    background-color: white;
+}
+</style>
 <script>
 // import { Clock, PerspectiveCamera, Scene, WebGLRenderer } from 'three'
 import * as THREE from 'three'
@@ -9,18 +13,23 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 import { RoughnessMipmapper } from 'three/examples/jsm/utils/RoughnessMipmapper.js';
 import hdrFile from "../../public/model/textures/snowy_field_4k.hdr";
-//import glbFile from "../../public/model/hero.glb";
+import glbFile from "../../public/model/hero.glb";
 
 export default {
     name: 'Characters',
     beforeMount() {
         console.log(`At this point, vm.$el has not been created yet.`)
 
-        var glbFile = require('../../public/model/hero.glb');
+        //var glbFile = require('../../public/model/hero.glb');
             
         let camera, scene, renderer;
         let mixer;
         var clock = new THREE.Clock();
+
+        var mouseDown = false,
+        mouseX = 0,
+        mouseY = 0;
+        var model;
 
         init();
         render();
@@ -53,7 +62,7 @@ export default {
 
                 const loader = new GLTFLoader();
                 loader.load( glbFile, function ( gltf ) {
-                    var model = gltf.scene;
+                    model = gltf.scene;
                     console.log(model);
                     //var animations = gltf.animations;
                     gltf.scene.traverse( function ( child ) {
@@ -82,7 +91,7 @@ export default {
 
             } );
 
-            renderer = new THREE.WebGLRenderer( { antialias: true } );
+            renderer = new THREE.WebGLRenderer( { antialias: true , alpha: true} );
             renderer.setPixelRatio( window.devicePixelRatio );
             renderer.setSize( window.innerWidth, window.innerHeight );
             renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -104,6 +113,39 @@ export default {
 
         }
 
+        function onMouseMove(evt) {
+                if (!mouseDown) {
+                    return;
+                }
+
+                evt.preventDefault();
+
+                var deltaX = evt.clientX - mouseX,
+                    deltaY = evt.clientY - mouseY;
+                mouseX = evt.clientX;
+                mouseY = evt.clientY;
+                rotateScene(deltaX, deltaY);
+        }
+
+        function onMouseDown(evt) {
+        evt.preventDefault();
+
+        mouseDown = true;
+        mouseX = evt.clientX;
+        mouseY = evt.clientY;
+        }
+
+        function onMouseUp(evt) {
+            evt.preventDefault();
+
+            mouseDown = false;
+        }
+
+        function rotateScene(deltaX, deltaY) {
+                model.rotation.y += deltaX / 100;
+                //model.rotation.x += deltaY / 100;
+        }
+
         //
 
         function render() {
@@ -115,6 +157,18 @@ export default {
             renderer.render(scene, camera);
         }
 
+        function addMouseHandler(canvas) {
+            canvas.addEventListener('mousemove', function (e) {
+                onMouseMove(e);
+            }, false);
+            canvas.addEventListener('mousedown', function (e) {
+                onMouseDown(e);
+            }, false);
+            canvas.addEventListener('mouseup', function (e) {
+                onMouseUp(e);
+            }, false);
+        }
+        addMouseHandler(document.getElementsByTagName("canvas")[0]);
     }
 }
 </script>

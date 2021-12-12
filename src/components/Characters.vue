@@ -8,12 +8,15 @@ import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 import { RoughnessMipmapper } from 'three/examples/jsm/utils/RoughnessMipmapper.js';
-
+import hdrFile from "../../public/model/textures/snowy_field_4k.hdr";
+//import glbFile from "../../public/model/hero.glb";
 
 export default {
     name: 'Characters',
     beforeMount() {
         console.log(`At this point, vm.$el has not been created yet.`)
+
+        var glbFile = require('../../public/model/hero.glb');
             
         let camera, scene, renderer;
         let mixer;
@@ -33,8 +36,9 @@ export default {
             scene = new THREE.Scene();
 
             const hdr = new RGBELoader()
-            .setPath( '../assets/model/textures/' )
-            .load( 'snowy_field_4k.hdr', function ( texture ) {
+            
+            
+            hdr.load( hdrFile , function ( texture ) {
 
                 texture.mapping = THREE.EquirectangularReflectionMapping;
 
@@ -47,11 +51,11 @@ export default {
                 // use of RoughnessMipmapper is optional
                 const roughnessMipmapper = new RoughnessMipmapper( renderer );
 
-                const loader = new GLTFLoader().setPath( '../assets/model/' );
-                loader.load( 'hero.glb', function ( gltf ) {
+                const loader = new GLTFLoader();
+                loader.load( glbFile, function ( gltf ) {
                     var model = gltf.scene;
                     console.log(model);
-                    var animations = gltf.animations;
+                    //var animations = gltf.animations;
                     gltf.scene.traverse( function ( child ) {
                         if ( child.isMesh ) {
 
@@ -67,8 +71,8 @@ export default {
 
                     mixer = new THREE.AnimationMixer( model);
 
-                    var action = mixer.clipAction( animations[ 0 ] ); // access first animation clip
-                    action.play();
+                    //var action = mixer.clipAction( animations[ 0 ] ); // access first animation clip
+                    //action.play();
 
                     roughnessMipmapper.dispose();
 

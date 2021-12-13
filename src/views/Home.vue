@@ -15,6 +15,7 @@ import Bottom from '../components/Bottom.vue'
 import MainSectionOne from '../components/MainSectionOne.vue'
 import MainSectionTwo from '../components/MainSectionTwo.vue'
 import MainMore from '../components/MainMore.vue'
+import CharacterOne from '../components/CharacterOne.vue'
 
 
 export default {
@@ -25,7 +26,8 @@ export default {
     Bottom,
     MainSectionOne,
     MainSectionTwo,
-    MainMore
+    MainMore,
+    CharacterOne
   }
 }
 </script>

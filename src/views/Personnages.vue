@@ -1,14 +1,14 @@
 <template>
   <MainMenu msg="GO" />
-  <MainTop msg="GO" />
-  <Characters />
+  <MainTop />
+  <CharacterOne />
 </template>
 
 <script>
 import MainTop from '../components/OtherTop.vue'
 import MainMenu from '../components/MainMenu.vue'
 import Bottom from '../components/Bottom.vue'
-import Characters from '../components/Characters.vue'
+import CharacterOne from '../components/CharacterOne.vue'
 
 export default {
   name: 'Personnages',
@@ -16,7 +16,7 @@ export default {
     MainTop,
     MainMenu,
     Bottom,
-    Characters
+    CharacterOne
   }
 }
 </script>

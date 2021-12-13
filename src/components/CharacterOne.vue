@@ -1,6 +1,6 @@
 <template>
     <div id="background">
-    NAME
+    LA <b>FORCE</b> DE <b style="font-size:500px; overflow: hidden;">NOËL</b> 
     </div>
 </template>
 <style>
@@ -13,9 +13,9 @@
    z-index: -1;
    overflow: hidden;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   font-size: 500px;
+   font-size: 100px;
     color: bisque;
-    margin-top: 100px;
+    margin-top: 160px;
 }
 </style>
 <script>
@@ -26,6 +26,7 @@ import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 import { RoughnessMipmapper } from 'three/examples/jsm/utils/RoughnessMipmapper.js';
 import hdrFile from "../../public/model/textures/snowy_field_4k.hdr";
 import glbFile from "../../public/model/hero.glb";
+
 
 export default {
     name: 'Characters',

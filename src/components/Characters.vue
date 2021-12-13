@@ -1,9 +1,21 @@
 <template>
-  <div id="canvas"></div>
+    <div id="background">
+    NAME
+    </div>
 </template>
 <style>
-#canvas{
-    background-color: white;
+#background {
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: -1;
+   overflow: hidden;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-size: 500px;
+    color: bisque;
+    margin-top: 100px;
 }
 </style>
 <script>

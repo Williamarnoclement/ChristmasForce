@@ -8,11 +8,13 @@
 import Home from "./views/Home";
 import Activites from "./views/Activites";
 import Personnages from "./views/Personnages";
+import Jouer from "./views/Jouer";
 
 const routes = {
   "/": Home,
   "/activites": Activites,
-  "/personnages": Personnages
+  "/personnages": Personnages,
+  "/jouer": Jouer
 };
 
 export default {

@@ -9,7 +9,7 @@
 <nav class="overlay-menu">
 	<ul>
 		<li ><a href="/">Accueil</a></li>
-		<li><a href="#">Jouer</a></li>
+		<li><a href="/jouer">Jouer</a></li>
 		<li><a href="/personnages">Modèle 3D</a></li>
 		<li><a href="/activites">Photo de Noël</a></li>
 	</ul>

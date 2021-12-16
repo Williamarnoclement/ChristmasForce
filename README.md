@@ -1,19 +1,14 @@
-# wac
+# Christmas FORCE: Experience
 
-## Project setup
-```
-npm install
-```
+Christmas Force: Experience est un site internet réalisé avec VueJS et servant de portail de mini jeux sur la Franchise Christmas Force.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Trois expériences viennent s'intégrer à l'expérience du site web: Une expérience Photomaton, un modèle 3D ainsi que le jeu webgl Christmas Force 2.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## L'idée
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+L'idée est de proposer un site internet regroupant plusieurs expériences complémentaires différentes en rapport avec la franchise Christmas force. Une sorte de mini-hub dans lequel on s'immerge dans l'univers de Noël.
+
+# Expérience 1: Jouer à Christmas FORCE 2
+
+L'intégration du jeu n'a pas été simple. Il faut que export via Unity soit préparé en amont avec la desactivation de fonctionnalités propres à Unity 3D qui ne sont pas compatible avec WebGL.
+J'ai eu beaucoup de difficultés à importer le jeu sous Vue, et j'ai d'ailleurs tenté d'utiliser un framework vue

@@ -1,4 +1,5 @@
 <template>
+<!-- Le header version pleine hauteur -->
   <section class="_game_screen">
 		<div class="flex-container">
 			<picture>

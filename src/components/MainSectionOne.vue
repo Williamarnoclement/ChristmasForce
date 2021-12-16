@@ -1,4 +1,5 @@
 <template>
+<!-- La section dédiée à CF1 ! -->
 <section class="_cf1_screen">
 		<div class="left_one">
 			<h1>Christmas Force: La force de Noël</h1><br>

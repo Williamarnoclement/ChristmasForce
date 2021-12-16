@@ -1,4 +1,5 @@
 <template>
+<!-- Le header version minifié -->
   <section class="_game_screen">
 		<a href="/"><div class="flex-container">
 			<picture>

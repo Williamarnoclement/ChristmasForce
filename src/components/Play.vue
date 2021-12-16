@@ -5,11 +5,12 @@
 </template>
 
 <script setup>
+/**
+ * Ce composant permet l'import et l'affichage de l'iframe webgl permettant de jouer via son navigateur web à Christmas FORCE 2.
+ * L'idée est d'utiliser la fonction OnMounted de VueJS pour précharger le jeu avant la mise à disposition de la page.
+ * 
+ */
 import { onMounted } from 'vue';
-
-const sendMessage = (object, method, param) => {
-  window.gameInstance.SendMessage(object, method, param);
-};
 
 onMounted(() => {
   const file = 'webgl';
@@ -20,16 +21,11 @@ onMounted(() => {
       frameworkUrl: `Build/${file}.framework.js`,
       codeUrl: `Build/${file}.wasm`,
       streamingAssetsUrl: 'StreamingAssets',
-      companyName: 'YOUR_COMPANY_NAME',
-      productName: 'YOUR_PRODUCT_NAME',
-      productVersion: 'YOUR_VERSION_NUMBER',
+      companyName: 'William-Arno CLEMENT',
+      productName: 'Christmas FORCE 2',
+      productVersion: '1.0',
       matchWebGLToCanvasSize: true,
-      // Uncomment above to separately control WebGL canvas render size and DOM element size.
-      //devicePixelRatio: 1,
-      // Uncomment above to override low DPI rendering on high DPI displays.
     }).then((unityInstance) => {
-      // setting this allows the usage of "window.gameInstance" in jslib plugins inside Unity
-      // it also sets up a simple shortcut we can use to provide a path into Unity from vue
       window.gameInstance = unityInstance;
     });
   };
@@ -37,7 +33,6 @@ onMounted(() => {
   script.src = `Build/${file}.loader.js`;
   document.head.appendChild(script);
 });
-
 </script>
 
 <style>

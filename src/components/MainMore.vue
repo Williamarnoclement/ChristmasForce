@@ -1,7 +1,8 @@
 <template>
+<!-- La section dédiée aux activités ! -->
 <section class="_cf1_screen">
 		<div><h1>(re)Découvrez la magie de Noël</h1>
-		<p>Découvrez nos activités pour petits et grands !</p>
+		<p>Venez prendre une photo en compagnie de la Force de Noël !</p>
 		<button @click="goTo('/activites')">Découvrir</button>
 		</div>
 </section>

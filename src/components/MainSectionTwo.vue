@@ -1,4 +1,5 @@
 <template>
+<!-- La section dédiée à CF2 ! -->
 <section class="_cf1_screen">
 		<div class="left_one">
 			<h1>Christmas Force 2</h1><br>

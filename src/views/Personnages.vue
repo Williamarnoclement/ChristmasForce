@@ -5,6 +5,9 @@
 </template>
 
 <script>
+/**
+ * Cette page permet l'affichage de la figurine en 3D d'un personnage.
+ */
 import MainTop from '../components/OtherTop.vue'
 import MainMenu from '../components/MainMenu.vue'
 import Bottom from '../components/Bottom.vue'

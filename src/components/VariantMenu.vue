@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'MainMenu'
+  name: 'VariantMenu'
 }
 
 
@@ -107,7 +107,7 @@ h2 {
   background: #FFF;
 }
 .button_container span {
-  background: white;
+  background: #E7203B;
   border: none;
   height: 5px;
   width: 100%;

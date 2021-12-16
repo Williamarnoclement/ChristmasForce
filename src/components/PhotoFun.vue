@@ -7,10 +7,14 @@
   <img class="image" id="go" src="../assets/png/overlay.png" style="width:100px; height:auto;" hidden/>
   <button class="Btn">Prendre une Photo</button>
   <canvas style="width: 100%;" class="result"></canvas>
-
 </template>
 
 <script>
+/**
+ * Cette page permet la fonctionnalité Photomaton.
+ * L'idée est de prendre un photo puis d'ajouter un filtre dessus aux couleurs de la Force de Noël.
+ * L'image filtre est en fait un élément caché de la page web que le script vient récupérer pour la fusionner avec l'image courante de la caméra.
+ */
 export default {
   name: 'PhotoFun',
   methods: {
@@ -25,14 +29,17 @@ export default {
           var context = resEle.getContext("2d");
           let BtnEle = document.querySelector(".Btn");
           BtnEle.addEventListener("click", () => {
+              //la taille de la deuxième image
               imgEle2.width = 40;
               imgEle2.height = 40;
-
+              //la taille du composant
               resEle.width = 650;
               resEle.height = 500;
 
+              //on imprime la première image en dessous
               context.globalAlpha = 1.0;
               context.drawImage(video, 0, 0);
+              //puis le filtre Christmas Force par dessus
               context.globalAlpha = 1.0;
               context.drawImage(imgEle2, 0, 0);
           });

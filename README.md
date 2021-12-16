@@ -15,5 +15,9 @@ J'ai eu beaucoup de difficultés à importer le jeu sous Vue, et j'ai d'ailleurs
 ```sh
 vue-unity-webgl
 ```
-Néanmoins, l'essaie ne s'étant pas révélé fructueux car il était pensé de base pour vue 2, je suis passé sur un import plus standard en m'inspirant de ce j'avais fait pour les expériences Photomaton et Figurine 3D.
+Néanmoins, l'essai ne s'étant pas révélé fructueux car il était pensé de base pour vue 2, je suis passé sur un import plus standard en m'inspirant de ce j'avais fait pour les expériences Photomaton et Figurine 3D.
+
+## Expérience 2: La figurine animée
+
+L'objectif initial était de travailler sur une scène animée avec la force de Noël. Cette fonctionnalité a été développeé via THREE JS et son implémentation dans Vue.
 

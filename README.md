@@ -20,4 +20,13 @@ Néanmoins, l'essai ne s'étant pas révélé fructueux car il était pensé de 
 ## Expérience 2: La figurine animée
 
 L'objectif initial était de travailler sur une scène animée avec la force de Noël. Cette fonctionnalité a été développeé via THREE JS et son implémentation dans Vue.
+L'import du modèle a été plus compliquée que prévue dans Vue JS. J'ai du utiliser un framework 
+```sh
+three-gltf-loader
+```
+afin de charger le modèle au format GLTF. J'ai également utilisé le framework 
+```sh
+file-loader
+```
+afin de faciliter la gestion des chemins de fichiers.
 

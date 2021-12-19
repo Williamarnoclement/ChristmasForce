@@ -30,3 +30,13 @@ file-loader
 ```
 afin de faciliter la gestion des chemins de fichiers.
 
+## Expérience 3: Le Photomaton !
+
+C'est la première expérience sur laquelle j'ai travaillé, mais elle me semblait pas assez complexe. C'est pourquoi j'ai choisi d'ajouter deux expérences supplémentaires pour faire de mon site une expérience à part entière doté de mini-expériences. 
+L'idée est de prendre un photo puis d'ajouter un filtre dessus aux couleurs de la Force de Noël.  L'image filtre est en fait un élément caché de la page web que le script vient récupérer pour la fusionner avec l'image courante de la caméra.
+Il s'agit d'une solution assez simple mais j'ai mis beaucoup de temps avant de la trouver.  Elle fonctionne sur PC mais le filtre n'est pas adapté aux téléphone. Après réflexions, j'aurais du faire un deuxième image filtre pour téléphone et changer l'image en fonction de la taille de l'écran.
+
+## Conclusion de mon travail
+
+Je suis super heureux d'avoir pu concrétiser ce projet très personnel ! Le site fonctionne bien !
+Je pense avoir pris la bonne décision en ayant fait un site front doté de plusieurs mini-expériences, car ceci m'a permis de proposer à la fois un site web front, mais aussi des fonctionnalités web modernes.
